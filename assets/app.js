@@ -3,7 +3,7 @@
   'use strict';
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const finePointer = window.matchMedia('(pointer: fine)').matches;
-  const LEAD_URL = 'https://terminator.pw/webhook/masterskaya-igr-lead';
+  const LEAD_URL = 'https://130-17-19-233.sslip.io/lead'; // служба mg-leads на radar-vps (Fornex, Нидерланды), не зависит от Beget
 
   /* ---------- Жанры: каталог и демо ---------- */
   const GENRES = [
