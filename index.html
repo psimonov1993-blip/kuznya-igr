@@ -3,153 +3,192 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Кузня игр: своя игра по описанию, без программиста</title>
-  <meta name="description" content="Выбери жанр, опиши сюжет и героев. Кузня игр соберёт игру, которая открывается по ссылке, ставится на Android и разворачивается на твоём сервере">
+  <title>Мастерская ИГР: своя игра по описанию, без программиста</title>
+  <meta name="description" content="Выбери жанр из 16, опиши героев и сюжет. Мастерская ИГР соберёт игру по ссылке, приложение для Android и пакет для твоего сервера">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#131209">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Кузня игр: своя игра по описанию">
-  <meta property="og:description" content="Жанр, сюжет и герои словами. Игра по ссылке, APK для Android и пакет для своего сервера">
+  <meta property="og:title" content="Мастерская ИГР: своя игра по описанию">
+  <meta property="og:description" content="16 жанров, твои герои и сюжет. Игра по ссылке, APK для Android и пакет для своего сервера">
   <meta property="og:image" content="https://psimonov1993-blip.github.io/kuznya-igr/og.png">
   <meta property="og:url" content="https://psimonov1993-blip.github.io/kuznya-igr/">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/hero-1600.webp" media="(min-width: 1000px)">
+  <link rel="preload" as="image" href="img/hero-900.webp" media="(max-width: 999px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="assets/app.css?v=20261102b">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/app.css?v=20261102e">
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <a class="skip-link button-sm" href="#main">Перейти к содержимому</a>
 
   <div class="nav-wrap">
     <nav class="nav" aria-label="Главное меню">
-      <a class="logo" href="#top" aria-label="Кузня игр, наверх">
-        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF8A1F" d="M12 2c1.2 3.1-.6 4.7-1.9 6.2C8.8 9.7 8 11 8 12.8 8 15.1 9.8 17 12 17s4-1.9 4-4.2c0-1.3-.5-2.4-1.2-3.3.1 1.4-.6 2.4-1.6 2.6.6-2.7-.3-5.5-1.2-7.1z"/><rect x="4" y="18" width="16" height="3" rx="1.5" fill="#F5F3EE"/></svg>
-        Кузня игр
+      <a class="logo" href="#top" aria-label="Мастерская ИГР, наверх">
+        <img class="logo-mark" src="favicon.svg" alt="" width="28" height="28">
+        <b class="title-3">Мастерская <span>ИГР</span></b>
       </a>
-      <div class="nav-links">
+      <div class="nav-links title-4">
+        <a href="#genres">Жанры</a>
         <a href="#demo">Демо</a>
-        <a href="#how">Как работает</a>
         <a href="#plans">Тарифы</a>
-        <a href="#biz">Для бизнеса</a>
+        <a href="#biz">Бизнесу</a>
         <a href="#faq">Вопросы</a>
       </div>
       <div class="nav-actions">
-        <a class="btn btn-primary btn-sm" href="#demo">Собрать игру</a>
+        <a class="btn btn-primary btn-sm button-sm" href="#demo">Собрать игру</a>
         <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
       </div>
     </nav>
   </div>
 
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu heading-4" id="mobile-menu" aria-hidden="true">
+    <a href="#genres">Жанры</a>
     <a href="#demo">Демо</a>
     <a href="#how">Как работает</a>
     <a href="#plans">Тарифы</a>
-    <a href="#biz">Для бизнеса</a>
+    <a href="#biz">Бизнесу</a>
     <a href="#faq">Вопросы</a>
-    <a class="btn btn-primary btn-lg" href="#demo">Собрать черновик бесплатно</a>
+    <a class="btn btn-primary btn-lg button-md" href="#demo">Собрать игру бесплатно</a>
   </div>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-inner">
-          <span class="chip"><span class="dot"></span>Конструктор игр на русском · ранний доступ</span>
-          <h1>Своя игра по описанию,<br>без программиста</h1>
-          <p class="sub">Выбери жанр, расскажи сюжет и героев. Кузня соберёт игру, которая открывается по ссылке, ставится на Android и разворачивается на твоём сервере</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="#demo"><i class="ph ph-hammer" aria-hidden="true"></i>Собрать черновик бесплатно</a>
-            <span class="proof"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Демо ниже работает без регистрации и карты</span>
+      <div class="container hero-wrap">
+        <div class="hero-card">
+          <div class="hero-art">
+            <picture>
+              <source media="(min-width: 1000px)" srcset="img/hero-1600.webp">
+              <img id="hero-img" src="img/hero-900.webp" alt="Герой Мастерской с молотом на наковальне, из искр вылетают миры игр: трасса, ракета, замок, подземелье, самоцветы" width="1600" height="1067" fetchpriority="high">
+            </picture>
+          </div>
+          <div class="hero-copy">
+            <span class="chip caption-1"><span class="dot"></span>Конструктор игр · ранний доступ</span>
+            <h1 class="heading-1 grad-text">Придумай игру.<br>Мастерская соберёт</h1>
+            <p class="sub body-7">Выбери жанр из 16, опиши героев и сюжет. Получишь игру по ссылке, приложение для Android и пакет для своего сервера</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg button-md" href="#demo"><i class="ph ph-hammer" aria-hidden="true"></i>Собрать игру бесплатно</a>
+              <span class="proof caption-1"><i class="ph-fill ph-check-circle" aria-hidden="true"></i>10 жанров можно попробовать прямо здесь</span>
+            </div>
+            <div class="facts caption-1">
+              <span class="fact"><i class="ph ph-squares-four" aria-hidden="true"></i>16 жанров</span>
+              <span class="fact"><i class="ph ph-android-logo" aria-hidden="true"></i>APK для Android</span>
+              <span class="fact"><i class="ph ph-hard-drives" aria-hidden="true"></i>Свой сервер</span>
+              <span class="fact"><i class="ph ph-credit-card" aria-hidden="true"></i>Оплата картой РФ</span>
+            </div>
           </div>
         </div>
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen" id="phone-screen">
+            <div class="phone-hud caption-3"><span>♥ ♥ ♥</span><span>Уровень 1</span></div>
+            <div class="phone-label caption-3" id="phone-label">Раннер</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- DEMO -->
-        <div class="demo" id="demo">
-          <div class="demo-shell">
-            <form class="demo-form" id="demo-form" novalidate>
-              <fieldset style="border:0;margin:0;padding:0;min-width:0">
-                <legend class="step-label"><span class="step-num">1</span>Жанр</legend>
-                <div class="genre-grid">
-                  <label class="option"><input type="radio" name="genre" value="runner" checked><span class="card"><i class="ph ph-person-simple-run" aria-hidden="true"></i>Раннер</span></label>
-                  <label class="option"><input type="radio" name="genre" value="space"><span class="card"><i class="ph ph-rocket-launch" aria-hidden="true"></i>Космобой</span></label>
-                  <label class="option"><input type="radio" name="genre" value="collector"><span class="card"><i class="ph ph-star" aria-hidden="true"></i>Сборщик звёзд</span></label>
-                </div>
-              </fieldset>
+    <!-- GENRES -->
+    <section class="section" id="genres">
+      <div class="container">
+        <div class="genre-top">
+          <div class="section-head reveal">
+            <div class="eyebrow caption-1"><i class="ph ph-squares-four" aria-hidden="true"></i>Жанры</div>
+            <h2 class="heading-2">16 жанров, и в каждом твои герои</h2>
+            <p class="lead body-7">Нейросеть не пишет игру с нуля, а наполняет проверенный движок жанра твоими уровнями, героями и текстами. Поэтому игра всегда запускается, а перед выдачей бот проходит каждый уровень</p>
+          </div>
+          <div class="legend caption-1 reveal">
+            <span class="live"><i class="ph-fill ph-play" aria-hidden="true"></i>10 можно попробовать сейчас</span>
+            <span><i class="ph ph-clock" aria-hidden="true"></i>6 появятся в сервисе</span>
+          </div>
+        </div>
+        <div class="genres" id="genre-grid"></div>
+      </div>
+    </section>
 
-              <fieldset style="border:0;margin:0;padding:0;min-width:0">
-                <legend class="step-label"><span class="step-num">2</span>Для чего игра</legend>
-                <div class="pill-row">
-                  <label class="option pill"><input type="radio" name="purpose" value="self" checked><span class="card"><i class="ph ph-game-controller" aria-hidden="true"></i>Для себя</span></label>
-                  <label class="option pill"><input type="radio" name="purpose" value="gift"><span class="card"><i class="ph ph-gift" aria-hidden="true"></i>Подарок</span></label>
-                  <label class="option pill"><input type="radio" name="purpose" value="biz"><span class="card"><i class="ph ph-storefront" aria-hidden="true"></i>Для бизнеса</span></label>
-                  <label class="option pill"><input type="radio" name="purpose" value="lesson"><span class="card"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i>Для урока</span></label>
-                </div>
-              </fieldset>
-
-              <div>
-                <div class="step-label"><span class="step-num">3</span>Описание</div>
-                <div class="field">
-                  <label for="f-desc">Какой должна быть игра</label>
-                  <textarea class="textarea" id="f-desc" name="desc" rows="2" maxlength="300">Яркая аркада минут на пять для сына, 10 лет. Без крови, с юмором</textarea>
-                </div>
+    <!-- DEMO -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow caption-1"><i class="ph ph-game-controller" aria-hidden="true"></i>Демо</div>
+          <h2 class="heading-2">Собери черновик прямо здесь</h2>
+          <p class="lead body-7">Выбери жанр, впиши героев и сюжет, нажми «Собрать демо». Игра запустится справа, играть можно с клавиатуры или пальцем</p>
+        </div>
+        <div class="card demo-shell">
+          <form class="panel demo-form" id="demo-form" novalidate>
+            <fieldset>
+              <legend class="step-label title-4"><span class="step-num caption-3">1</span>Жанр</legend>
+              <div class="genre-pick" id="genre-pick"></div>
+            </fieldset>
+            <fieldset>
+              <legend class="step-label title-4"><span class="step-num caption-3">2</span>Для чего игра</legend>
+              <div class="pill-row">
+                <label class="option pill"><input type="radio" name="purpose" value="self" checked><span class="card-opt body-5"><i class="ph ph-game-controller" aria-hidden="true"></i>Для себя</span></label>
+                <label class="option pill"><input type="radio" name="purpose" value="gift"><span class="card-opt body-5"><i class="ph ph-gift" aria-hidden="true"></i>Подарок</span></label>
+                <label class="option pill"><input type="radio" name="purpose" value="biz"><span class="card-opt body-5"><i class="ph ph-storefront" aria-hidden="true"></i>Для бизнеса</span></label>
+                <label class="option pill"><input type="radio" name="purpose" value="lesson"><span class="card-opt body-5"><i class="ph ph-chalkboard-teacher" aria-hidden="true"></i>Для урока</span></label>
               </div>
-
-              <div>
-                <div class="step-label"><span class="step-num">4</span>Персонажи</div>
-                <div class="field-row">
-                  <div class="field">
-                    <label for="f-hero">Герой</label>
-                    <input class="input" id="f-hero" name="hero" value="Искра" maxlength="16" required autocomplete="off" aria-describedby="e-hero">
-                    <span class="field-error" id="e-hero" aria-live="polite"></span>
-                  </div>
-                  <div class="field">
-                    <label for="f-villain">Злодей</label>
-                    <input class="input" id="f-villain" name="villain" value="Барон Мрак" maxlength="16" required autocomplete="off" aria-describedby="e-villain">
-                    <span class="field-error" id="e-villain" aria-live="polite"></span>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <div class="step-label"><span class="step-num">5</span>Сюжет</div>
-                <div class="field">
-                  <label for="f-plot">Что происходит</label>
-                  <textarea class="textarea" id="f-plot" name="plot" rows="3" maxlength="240" required aria-describedby="e-plot">Барон Мрак украл все звёзды над городом. Искра должна вернуть их до рассвета, пока город не уснул навсегда</textarea>
-                  <span class="field-error" id="e-plot" aria-live="polite"></span>
-                </div>
-              </div>
-
-              <button class="btn btn-primary btn-lg" type="submit" id="build-btn"><i class="ph ph-hammer" aria-hidden="true"></i>Собрать демо</button>
-            </form>
-
-            <div class="demo-stage">
-              <div class="stage-top">
-                <div class="stage-title" id="stage-title">Искра против Барона Мрака<small id="stage-sub">Раннер · для себя</small></div>
-                <div class="stage-tools">
-                  <button class="icon-btn" type="button" id="btn-restart" aria-label="Начать заново"><i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i></button>
-                  <button class="icon-btn" type="button" id="btn-full" aria-label="Во весь экран"><i class="ph ph-arrows-out" aria-hidden="true"></i></button>
-                </div>
-              </div>
-              <div class="screen" id="screen">
-                <canvas id="game" width="640" height="360" tabindex="0" aria-label="Демо-игра. Нажми, чтобы начать"></canvas>
-                <div class="skeleton" id="skeleton" aria-hidden="true">
-                  <div class="sk-block"></div>
-                  <div class="sk-line" style="width:72%"></div>
-                  <div class="sk-line" style="width:48%"></div>
-                  <div class="sk-status" id="sk-status">Собираю уровень из шаблона жанра</div>
-                </div>
-              </div>
-              <div class="stage-hint" id="stage-hint"></div>
-              <div class="passport" aria-live="polite">
-                <div class="passport-head"><i class="ph ph-file-text" aria-hidden="true"></i><b>Паспорт игры</b><span>так сервис понял описание</span></div>
-                <dl id="passport"></dl>
-              </div>
-              <p class="honest"><i class="ph ph-info" aria-hidden="true"></i><span>В демо игра собирается из шаблона жанра прямо в браузере. В сервисе паспорт пишет нейросеть: уровни, диалоги, баланс, картинки героев. Правки ты пишешь словами, и паспорт меняется</span></p>
+            </fieldset>
+            <div class="field">
+              <div class="step-label title-4"><span class="step-num caption-3">3</span>Описание</div>
+              <label class="caption-4" for="f-desc">Какой должна быть игра</label>
+              <textarea class="textarea" id="f-desc" name="desc" rows="2" maxlength="300">Яркая аркада минут на пять для сына, 10 лет. Без крови, с юмором</textarea>
             </div>
+            <div>
+              <div class="step-label title-4"><span class="step-num caption-3">4</span>Персонажи</div>
+              <div class="field-row">
+                <div class="field">
+                  <label class="caption-4" for="f-hero">Герой</label>
+                  <input class="input" id="f-hero" name="hero" value="Искра" maxlength="16" required autocomplete="off" aria-describedby="e-hero">
+                  <span class="field-error caption-5" id="e-hero" aria-live="polite"></span>
+                </div>
+                <div class="field">
+                  <label class="caption-4" for="f-villain">Злодей</label>
+                  <input class="input" id="f-villain" name="villain" value="Барон Мрак" maxlength="16" required autocomplete="off" aria-describedby="e-villain">
+                  <span class="field-error caption-5" id="e-villain" aria-live="polite"></span>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <div class="step-label title-4"><span class="step-num caption-3">5</span>Сюжет</div>
+              <label class="caption-4" for="f-plot">Что происходит</label>
+              <textarea class="textarea" id="f-plot" name="plot" rows="3" maxlength="240" required aria-describedby="e-plot">Барон Мрак украл все звёзды над городом. Искра должна вернуть их до рассвета, пока город не уснул навсегда</textarea>
+              <span class="field-error caption-5" id="e-plot" aria-live="polite"></span>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block button-md" type="submit" id="build-btn"><i class="ph ph-hammer" aria-hidden="true"></i>Собрать демо</button>
+          </form>
+
+          <div class="panel stage">
+            <div class="stage-top">
+              <div class="stage-title title-3" id="stage-title">Раннер: Искра</div>
+              <div class="stage-tools">
+                <button class="icon-btn" type="button" id="btn-restart" aria-label="Начать заново"><i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i></button>
+                <button class="icon-btn" type="button" id="btn-full" aria-label="Во весь экран"><i class="ph ph-arrows-out" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div class="screen" id="screen">
+              <canvas id="game" width="640" height="360" tabindex="0" aria-label="Демо-игра. Нажми, чтобы начать"></canvas>
+              <div class="skeleton" id="skeleton" aria-hidden="true">
+                <div class="sk-block"></div>
+                <div class="sk-line" style="width:72%"></div>
+                <div class="sk-line" style="width:48%"></div>
+                <div class="sk-status body-6" id="sk-status">Собираю уровень из шаблона жанра</div>
+              </div>
+            </div>
+            <div class="stage-hint" id="stage-hint"></div>
+            <div class="passport" aria-live="polite">
+              <div class="passport-head"><i class="ph ph-file-text" aria-hidden="true"></i><b class="title-4">Паспорт игры</b><span class="caption-5 muted">так сервис понял описание</span></div>
+              <dl id="passport"></dl>
+            </div>
+            <div class="stage-cta">
+              <div><b class="body-4">Нравится? Соберём настоящую игру</b><p class="caption-2 muted">Заявка уйдёт вместе с паспортом этой игры</p></div>
+              <button class="btn btn-primary button-md" type="button" data-lead="game" data-interest="Игра 690 ₽"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>Хочу такую игру</button>
+            </div>
+            <p class="honest caption-5"><i class="ph ph-info" aria-hidden="true"></i><span>В демо игра собирается из шаблона жанра прямо в браузере. В сервисе паспорт пишет нейросеть: уровни, диалоги, баланс, картинки героев. Правки ты пишешь словами, и паспорт меняется</span></p>
           </div>
         </div>
       </div>
@@ -158,7 +197,7 @@
     <!-- TAGLINE -->
     <section class="tagline" aria-label="Главная мысль">
       <div class="container">
-        <p id="tagline">Ты придумываешь <span data-hot>историю</span>. Кузня превращает её в <span data-hot>игру</span>, в которую друзья сыграют сегодня по одной ссылке</p>
+        <p id="tagline" class="heading-2">Ты придумываешь <span data-hot>историю</span>. Мастерская превращает её в <span data-hot>игру</span>, в которую друзья сыграют сегодня по одной ссылке</p>
       </div>
     </section>
 
@@ -166,98 +205,59 @@
     <section class="section" id="how">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-path" aria-hidden="true"></i>Как это работает</div>
-          <h2 class="h2">Три шага от идеи до игры, в которую играют</h2>
+          <div class="eyebrow caption-1"><i class="ph ph-path" aria-hidden="true"></i>Как это работает</div>
+          <h2 class="heading-2">Три шага от идеи до игры, в которую играют</h2>
         </div>
-        <div class="steps">
-          <article class="card-plain step-card reveal">
-            <div class="num">Шаг 1</div>
-            <h3>Опиши словами</h3>
-            <p>Жанр, для чего игра, герои и сюжет. Можно добавить фото, и герой получит знакомое лицо</p>
-            <div class="ex"><span>Например</span>Космическая аркада, где мой кот Бублик защищает дачу от пришельцев-огурцов</div>
+        <div class="steps stagger">
+          <article class="card step reveal" style="--i:0">
+            <span class="num caption-3">Шаг 1</span>
+            <h3 class="heading-6">Опиши словами</h3>
+            <p class="body-3">Жанр, для чего игра, герои и сюжет. Можно добавить фото, и герой получит знакомое лицо</p>
+            <div class="vis body-6">
+              <div class="bubble">Космическая аркада, где мой кот Бублик защищает дачу от пришельцев-огурцов</div>
+              <div class="bubble">Сделай босса быстрее, а на третьем уровне добавь дождь</div>
+            </div>
           </article>
-          <article class="card-plain step-card reveal">
-            <div class="num">Шаг 2</div>
-            <h3>Поиграй и поправь</h3>
-            <p>Черновик появляется за несколько минут. Не нравится, пиши правку обычными словами, игра пересобирается</p>
-            <div class="ex"><span>Правка</span>Сделай босса быстрее, а на третьем уровне добавь дождь</div>
+          <article class="card step reveal" style="--i:1">
+            <span class="num caption-3">Шаг 2</span>
+            <h3 class="heading-6">Мастерская пишет паспорт</h3>
+            <p class="body-3">Нейросеть раскладывает описание на уровни, героев, врагов и тексты. Движок жанра собирает из этого игру</p>
+            <div class="vis"><pre class="code"><span class="k">жанр</span>: <span class="s">«Космобой»</span>
+<span class="k">герой</span>: <span class="s">«Бублик»</span>, кот
+<span class="k">злодей</span>: <span class="s">«Огурцы с Марса»</span>
+<span class="k">уровни</span>: 5, <span class="k">босс</span>: на 5
+<span class="k">погода</span>: дождь на 3
+<span class="k">финал</span>: <span class="s">«Дача спасена»</span></pre></div>
           </article>
-          <article class="card-plain step-card reveal">
-            <div class="num">Шаг 3</div>
-            <h3>Забери игру</h3>
-            <p>Ссылка для друзей, приложение для Android или архив для своего сервера. Игра остаётся твоей</p>
-            <div class="ex"><span>Результат</span>Ссылка в чат класса, APK на планшет у стенда, игра на сайте компании</div>
+          <article class="card step reveal" style="--i:2">
+            <span class="num caption-3">Шаг 3</span>
+            <h3 class="heading-6">Играй и забирай</h3>
+            <p class="body-3">Черновик появляется за несколько минут. Правишь словами, пока не понравится, и забираешь игру</p>
+            <div class="vis body-5">
+              <div class="out-row"><i class="ph ph-link" aria-hidden="true"></i>Ссылка в чат друзьям</div>
+              <div class="out-row"><i class="ph ph-android-logo" aria-hidden="true"></i>APK на телефон и планшет</div>
+              <div class="out-row"><i class="ph ph-hard-drives" aria-hidden="true"></i>Архив для своего сервера</div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- FORMATS / BENEFITS -->
+    <!-- FORMATS -->
     <section class="section" id="formats">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-package" aria-hidden="true"></i>Что ты получаешь</div>
-          <h2 class="h2">Одна игра, три способа её отдать</h2>
-          <p class="lead">Веб-версия есть у каждой игры. Android и свой сервер подключаются, когда они нужны</p>
+          <div class="eyebrow caption-1"><i class="ph ph-package" aria-hidden="true"></i>Что ты получаешь</div>
+          <h2 class="heading-2">Одна игра, три способа её отдать</h2>
+          <p class="lead body-7">Веб-версия есть у каждой игры. Android и свой сервер подключаются, когда они нужны</p>
         </div>
-        <div class="benefits">
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-globe" aria-hidden="true"></i></span>
-            <h3>Игра по ссылке</h3>
-            <p>Открывается в браузере компьютера и телефона, на iPhone тоже. Ссылку кидаешь в чат, код вставляешь на сайт</p>
-            <span class="tag">Во всех тарифах</span>
-          </article>
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-android-logo" aria-hidden="true"></i></span>
-            <h3>Приложение для Android</h3>
-            <p>Готовый APK с иконкой и названием твоей игры. Ставится с сайта, работает без интернета</p>
-            <span class="tag">990 ₽ за игру</span>
-          </article>
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-hard-drives" aria-hidden="true"></i></span>
-            <h3>Пакет для своего сервера</h3>
-            <p>Архив с игрой, инструкцией и установкой одной командой. Подходит и обычный хостинг сайта</p>
-            <span class="tag">от 2 990 ₽</span>
-          </article>
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-chat-circle-text" aria-hidden="true"></i></span>
-            <h3>Правки словами</h3>
-            <p>Не нужен редактор уровней. Пишешь, что поменять, и через несколько секунд играешь в новую версию</p>
-            <span class="tag">от 50 правок в игре</span>
-          </article>
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-user-focus" aria-hidden="true"></i></span>
-            <h3>Герой из фото</h3>
-            <p>Загрузи фото, и нейросеть нарисует персонажа в стиле игры. Лучший подарок на день рождения</p>
-            <span class="tag">290 ₽ за героя</span>
-          </article>
-          <article class="card-plain benefit reveal">
-            <span class="ico"><i class="ph ph-users-three" aria-hidden="true"></i></span>
-            <h3>Рекорды и игра вместе</h3>
-            <p>Общая таблица рекордов и комнаты, где играют от 2 до 8 человек одновременно</p>
-            <span class="tag">в Творце и Студии</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GENRES -->
-    <section class="section" id="genres">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-squares-four" aria-hidden="true"></i>Жанры</div>
-          <h2 class="h2">Каждый жанр собран на своём движке, поэтому игра всегда запускается</h2>
-          <p class="lead">Нейросеть не пишет код с нуля, а наполняет проверенный движок жанра твоими уровнями, героями и текстами. Перед выдачей бот проходит каждый уровень</p>
-        </div>
-        <div class="genres reveal">
-          <div class="genre live"><i class="ph ph-person-simple-run" aria-hidden="true"></i><div><b>Раннер</b><small>есть в демо</small></div></div>
-          <div class="genre live"><i class="ph ph-rocket-launch" aria-hidden="true"></i><div><b>Космическая аркада</b><small>есть в демо</small></div></div>
-          <div class="genre live"><i class="ph ph-star" aria-hidden="true"></i><div><b>Сборщик звёзд</b><small>есть в демо</small></div></div>
-          <div class="genre"><i class="ph ph-chats-circle" aria-hidden="true"></i><div><b>Квест с диалогами</b><small>к запуску</small></div></div>
-          <div class="genre"><i class="ph ph-exam" aria-hidden="true"></i><div><b>Викторина и тренажёр</b><small>после запуска</small></div></div>
-          <div class="genre"><i class="ph ph-grid-four" aria-hidden="true"></i><div><b>Три в ряд</b><small>после запуска</small></div></div>
-          <div class="genre"><i class="ph ph-steering-wheel" aria-hidden="true"></i><div><b>Гонки</b><small>после запуска</small></div></div>
-          <div class="genre"><i class="ph ph-castle-turret" aria-hidden="true"></i><div><b>Защита башен</b><small>после запуска</small></div></div>
+        <div class="benefits stagger">
+          <article class="card benefit reveal" style="--i:0"><span class="ico"><i class="ph ph-globe" aria-hidden="true"></i></span><h3 class="title-2">Игра по ссылке</h3><p class="body-3">Открывается в браузере компьютера и телефона, на iPhone тоже. Ссылку кидаешь в чат, код вставляешь на сайт</p><span class="tag caption-3">Во всех тарифах</span></article>
+          <article class="card benefit reveal" style="--i:1"><span class="ico"><i class="ph ph-android-logo" aria-hidden="true"></i></span><h3 class="title-2">Приложение для Android</h3><p class="body-3">Готовый APK с иконкой и названием твоей игры. Ставится с сайта, работает без интернета</p><span class="tag caption-3">990 ₽ за игру</span></article>
+          <article class="card benefit reveal" style="--i:2"><span class="ico"><i class="ph ph-hard-drives" aria-hidden="true"></i></span><h3 class="title-2">Пакет для своего сервера</h3><p class="body-3">Архив с игрой, инструкцией и установкой одной командой. Подходит и обычный хостинг сайта</p><span class="tag caption-3">от 2 990 ₽</span></article>
+          <article class="card benefit reveal" style="--i:3"><span class="ico"><i class="ph ph-chat-circle-text" aria-hidden="true"></i></span><h3 class="title-2">Правки словами</h3><p class="body-3">Не нужен редактор уровней. Пишешь, что поменять, и через несколько секунд играешь в новую версию</p><span class="tag caption-3">от 50 правок в игре</span></article>
+          <article class="card benefit reveal" style="--i:4"><span class="ico"><i class="ph ph-user-focus" aria-hidden="true"></i></span><h3 class="title-2">Герой из фото</h3><p class="body-3">Загрузи фото, и нейросеть нарисует персонажа в стиле игры. Лучший подарок на день рождения</p><span class="tag caption-3">290 ₽ за героя</span></article>
+          <article class="card benefit reveal" style="--i:5"><span class="ico"><i class="ph ph-users-three" aria-hidden="true"></i></span><h3 class="title-2">Рекорды и игра вместе</h3><p class="body-3">Общая таблица рекордов и комнаты, где играют от 2 до 8 человек одновременно</p><span class="tag caption-3">в Творце и Студии</span></article>
         </div>
       </div>
     </section>
@@ -266,62 +266,62 @@
     <section class="section" id="plans">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-tag" aria-hidden="true"></i>Тарифы</div>
-          <h2 class="h2">Пробуешь бесплатно, платишь, когда игра понравилась</h2>
-          <p class="lead">Нужна одна игра, бери разово. Делаешь игры часто, подписка выйдет дешевле</p>
+          <div class="eyebrow caption-1"><i class="ph ph-tag" aria-hidden="true"></i>Тарифы</div>
+          <h2 class="heading-2">Пробуешь бесплатно, платишь, когда игра понравилась</h2>
+          <p class="lead body-7">Нужна одна игра, бери разово. Делаешь игры часто, подписка выйдет дешевле</p>
         </div>
-        <div class="plans">
-          <article class="card-plain plan reveal">
-            <div><h3>Проба</h3><p class="for">Посмотреть, как это работает</p></div>
-            <div class="price"><b>0 ₽</b><span>без карты</span></div>
-            <ul>
+        <div class="plans stagger">
+          <article class="card plan reveal" style="--i:0">
+            <div><h3 class="heading-6">Проба</h3><p class="for body-6">Посмотреть, как это работает</p></div>
+            <div class="price"><b class="heading-3">0 ₽</b><span class="caption-2">без карты</span></div>
+            <ul class="body-6">
               <li><i class="ph ph-check" aria-hidden="true"></i>1 черновик игры, 3 уровня</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>10 правок словами</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>Герои из готовой библиотеки</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>Ссылка живёт 7 дней</li>
-              <li class="off"><i class="ph ph-x" aria-hidden="true"></i>Знак Кузни на экране</li>
+              <li class="off"><i class="ph ph-x" aria-hidden="true"></i>Знак Мастерской на экране</li>
             </ul>
-            <a class="btn btn-ghost" href="#demo">Попробовать</a>
+            <a class="btn btn-ghost button-md" href="#demo">Попробовать</a>
           </article>
-          <article class="card-plain plan reveal">
-            <div><h3>Игра</h3><p class="for">Одна игра в подарок или для себя</p></div>
-            <div class="price"><b>690 ₽</b><span>разово</span></div>
-            <ul>
+          <article class="card plan reveal" style="--i:1">
+            <div><h3 class="heading-6">Игра</h3><p class="for body-6">Одна игра в подарок или для себя</p></div>
+            <div class="price"><b class="heading-3">690 ₽</b><span class="caption-2">разово</span></div>
+            <ul class="body-6">
               <li><i class="ph ph-check" aria-hidden="true"></i>До 10 уровней</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>50 правок словами</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>12 картинок нейросетью</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>Ссылка навсегда, без знака</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>APK и сервер докупаются</li>
             </ul>
-            <a class="btn btn-ghost" href="#early">Хочу игру</a>
+            <button class="btn btn-ghost button-md" type="button" data-lead="plan" data-interest="Игра 690 ₽">Хочу игру</button>
           </article>
-          <article class="card-plain plan best reveal">
-            <span class="badge">Выгоднее всего</span>
-            <div><h3>Творец</h3><p class="for">Для тех, кто делает игры часто</p></div>
-            <div class="price"><b>990 ₽</b><span>в месяц</span></div>
-            <ul>
+          <article class="card plan best reveal" style="--i:2">
+            <span class="badge caption-3">Выгоднее всего</span>
+            <div><h3 class="heading-6">Творец</h3><p class="for body-6">Для тех, кто делает игры часто</p></div>
+            <div class="price"><b class="heading-3">990 ₽</b><span class="caption-2">в месяц</span></div>
+            <ul class="body-6">
               <li><i class="ph ph-check" aria-hidden="true"></i>5 новых игр в месяц, до 15 уровней</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>200 правок, 30 картинок</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>3 героя из фото</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>Онлайн-рекорды</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>2 соавтора в одной игре</li>
             </ul>
-            <a class="btn btn-primary" href="#early">Записаться первым</a>
+            <button class="btn btn-primary button-md" type="button" data-lead="plan" data-interest="Творец 990 ₽/мес">Записаться первым</button>
           </article>
-          <article class="card-plain plan reveal">
-            <div><h3>Студия</h3><p class="for">Блогерам, школам и командам</p></div>
-            <div class="price"><b>2 990 ₽</b><span>в месяц</span></div>
-            <ul>
+          <article class="card plan reveal" style="--i:3">
+            <div><h3 class="heading-6">Студия</h3><p class="for body-6">Блогерам, школам и командам</p></div>
+            <div class="price"><b class="heading-3">2 990 ₽</b><span class="caption-2">в месяц</span></div>
+            <ul class="body-6">
               <li><i class="ph ph-check" aria-hidden="true"></i>15 игр в месяц, до 30 уровней</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>500 правок, 60 картинок, 10 героев из фото</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>3 своих механики кодом в месяц</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>Мультиплеер и 5 соавторов</li>
               <li><i class="ph ph-check" aria-hidden="true"></i>5 APK в месяц и пакет для сервера</li>
             </ul>
-            <a class="btn btn-ghost" href="#early">Записаться</a>
+            <button class="btn btn-ghost button-md" type="button" data-lead="plan" data-interest="Студия 2 990 ₽/мес">Записаться</button>
           </article>
         </div>
-        <p class="note reveal">Цены раннего доступа. Оплата картой российского банка. Для сравнения: зарубежный конструктор такого типа отдаёт код игры только с тарифа за $50 в месяц и не принимает российские карты</p>
+        <p class="note body-6 reveal">Цены раннего доступа. Оплата картой российского банка. Для сравнения: зарубежный конструктор такого типа отдаёт код игры только с тарифа за $50 в месяц и не принимает российские карты</p>
       </div>
     </section>
 
@@ -329,22 +329,22 @@
     <section class="section" id="options">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-plus-circle" aria-hidden="true"></i>Опции</div>
-          <h2 class="h2">Добавь к игре то, что нужно именно тебе</h2>
+          <div class="eyebrow caption-1"><i class="ph ph-plus-circle" aria-hidden="true"></i>Опции</div>
+          <h2 class="heading-2">Добавь к игре то, что нужно именно тебе</h2>
         </div>
         <div class="options reveal">
-          <div class="opt"><i class="ph ph-android-logo" aria-hidden="true"></i><div><b>APK для Android</b><small>Своя иконка и название, ставится с сайта</small></div><span class="cost">990 ₽</span></div>
-          <div class="opt"><i class="ph ph-hard-drives" aria-hidden="true"></i><div><b>Пакет для сервера, личный</b><small>Архив, инструкция, установка одной командой</small></div><span class="cost">2 990 ₽</span></div>
-          <div class="opt"><i class="ph ph-briefcase" aria-hidden="true"></i><div><b>Коммерческая лицензия</b><small>Свой домен, без знака Кузни, для заработка</small></div><span class="cost">14 990 ₽</span></div>
-          <div class="opt"><i class="ph ph-wrench" aria-hidden="true"></i><div><b>Установка под ключ</b><small>Разворачиваем игру на твоём сервере сами</small></div><span class="cost">9 900 ₽</span></div>
-          <div class="opt"><i class="ph ph-user-focus" aria-hidden="true"></i><div><b>Герой из фото</b><small>Персонаж в стиле игры по твоей фотографии</small></div><span class="cost">290 ₽</span></div>
-          <div class="opt"><i class="ph ph-gift" aria-hidden="true"></i><div><b>Подарочное оформление</b><small>Заставка с поздравлением, открытка со ссылкой, QR для печати</small></div><span class="cost">490 ₽</span></div>
-          <div class="opt"><i class="ph ph-list-plus" aria-hidden="true"></i><div><b>Ещё 5 уровней</b><small>Продолжение сюжета в той же игре</small></div><span class="cost">390 ₽</span></div>
-          <div class="opt"><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><div><b>Ещё 100 правок</b><small>Когда хочется довести игру до идеала</small></div><span class="cost">290 ₽</span></div>
-          <div class="opt"><i class="ph ph-trophy" aria-hidden="true"></i><div><b>Онлайн-рекорды</b><small>Общая таблица для одной игры</small></div><span class="cost">290 ₽</span></div>
-          <div class="opt"><i class="ph ph-users-three" aria-hidden="true"></i><div><b>Мультиплеер</b><small>Комнаты на 2, 4 или 8 игроков</small></div><span class="cost">1 990 ₽</span></div>
-          <div class="opt"><i class="ph ph-code" aria-hidden="true"></i><div><b>Своя механика</b><small>Нейросеть дописывает правило, которого нет в жанре</small></div><span class="cost">490 ₽</span></div>
-          <div class="opt"><i class="ph ph-storefront" aria-hidden="true"></i><div><b>Подготовка к RuStore</b><small>Иконки, скриншоты, описание, подпись приложения</small></div><span class="cost">2 990 ₽</span></div>
+          <div class="opt"><i class="ph ph-android-logo" aria-hidden="true"></i><div><b class="title-3">APK для Android</b><small class="caption-2">Своя иконка и название, ставится с сайта</small></div><span class="cost body-1">990 ₽</span></div>
+          <div class="opt"><i class="ph ph-hard-drives" aria-hidden="true"></i><div><b class="title-3">Пакет для сервера, личный</b><small class="caption-2">Архив, инструкция, установка одной командой</small></div><span class="cost body-1">2 990 ₽</span></div>
+          <div class="opt"><i class="ph ph-briefcase" aria-hidden="true"></i><div><b class="title-3">Коммерческая лицензия</b><small class="caption-2">Свой домен, без знака Мастерской, для заработка</small></div><span class="cost body-1">14 990 ₽</span></div>
+          <div class="opt"><i class="ph ph-wrench" aria-hidden="true"></i><div><b class="title-3">Установка под ключ</b><small class="caption-2">Разворачиваем игру на твоём сервере сами</small></div><span class="cost body-1">9 900 ₽</span></div>
+          <div class="opt"><i class="ph ph-user-focus" aria-hidden="true"></i><div><b class="title-3">Герой из фото</b><small class="caption-2">Персонаж в стиле игры по твоей фотографии</small></div><span class="cost body-1">290 ₽</span></div>
+          <div class="opt"><i class="ph ph-gift" aria-hidden="true"></i><div><b class="title-3">Подарочное оформление</b><small class="caption-2">Заставка с поздравлением, открытка со ссылкой, QR для печати</small></div><span class="cost body-1">490 ₽</span></div>
+          <div class="opt"><i class="ph ph-list-plus" aria-hidden="true"></i><div><b class="title-3">Ещё 5 уровней</b><small class="caption-2">Продолжение сюжета в той же игре</small></div><span class="cost body-1">390 ₽</span></div>
+          <div class="opt"><i class="ph ph-pencil-simple-line" aria-hidden="true"></i><div><b class="title-3">Ещё 100 правок</b><small class="caption-2">Когда хочется довести игру до идеала</small></div><span class="cost body-1">290 ₽</span></div>
+          <div class="opt"><i class="ph ph-trophy" aria-hidden="true"></i><div><b class="title-3">Онлайн-рекорды</b><small class="caption-2">Общая таблица для одной игры</small></div><span class="cost body-1">290 ₽</span></div>
+          <div class="opt"><i class="ph ph-users-three" aria-hidden="true"></i><div><b class="title-3">Мультиплеер</b><small class="caption-2">Комнаты на 2, 4 или 8 игроков</small></div><span class="cost body-1">1 990 ₽</span></div>
+          <div class="opt"><i class="ph ph-code" aria-hidden="true"></i><div><b class="title-3">Своя механика</b><small class="caption-2">Нейросеть дописывает правило, которого нет в жанре</small></div><span class="cost body-1">490 ₽</span></div>
+          <div class="opt"><i class="ph ph-storefront" aria-hidden="true"></i><div><b class="title-3">Подготовка к RuStore</b><small class="caption-2">Иконки, скриншоты, описание, подпись приложения</small></div><span class="cost body-1">2 990 ₽</span></div>
         </div>
       </div>
     </section>
@@ -354,27 +354,30 @@
       <div class="container">
         <div class="biz">
           <div class="reveal">
-            <div class="eyebrow"><i class="ph ph-briefcase" aria-hidden="true"></i>Для бизнеса</div>
-            <h2 class="h2">Игра, после которой клиент оставляет телефон</h2>
-            <p class="lead">Брендированная мини-игра для акции, выставки или сайта. В финале игрок получает промокод, а ты получаешь контакт и отчёт, сколько человек сыграло</p>
+            <div class="eyebrow caption-1"><i class="ph ph-briefcase" aria-hidden="true"></i>Для бизнеса</div>
+            <h2 class="heading-2">Игра, после которой клиент оставляет телефон</h2>
+            <p class="body-7 muted" style="margin-top:16px;max-width:620px">Брендированная мини-игра для акции, выставки или сайта. В финале игрок получает промокод, а ты получаешь контакт и отчёт, сколько человек сыграло</p>
             <div class="biz-list">
-              <div class="biz-item"><i class="ph ph-paint-brush" aria-hidden="true"></i><div><b>Твой бренд в игре</b><p>Логотип, цвета, товары становятся предметами и бонусами</p></div></div>
-              <div class="biz-item"><i class="ph ph-address-book" aria-hidden="true"></i><div><b>Сбор заявок</b><p>Форма в финале игры, заявки падают тебе в почту или CRM</p></div></div>
-              <div class="biz-item"><i class="ph ph-ticket" aria-hidden="true"></i><div><b>Промокоды</b><p>Скидка за рекорд или за прохождение, с ограничением по количеству</p></div></div>
-              <div class="biz-item"><i class="ph ph-device-tablet" aria-hidden="true"></i><div><b>Стенд на выставке</b><p>APK на планшет, игра работает без интернета, рекорды дня на экране</p></div></div>
+              <div class="biz-item"><i class="ph ph-paint-brush" aria-hidden="true"></i><div><b class="title-3">Твой бренд в игре</b><p class="body-6">Логотип, цвета, товары становятся предметами и бонусами</p></div></div>
+              <div class="biz-item"><i class="ph ph-address-book" aria-hidden="true"></i><div><b class="title-3">Сбор заявок</b><p class="body-6">Форма в финале игры, заявки падают тебе в Telegram, Max или на почту</p></div></div>
+              <div class="biz-item"><i class="ph ph-ticket" aria-hidden="true"></i><div><b class="title-3">Промокоды</b><p class="body-6">Скидка за рекорд или за прохождение, с ограничением по количеству</p></div></div>
+              <div class="biz-item"><i class="ph ph-device-tablet" aria-hidden="true"></i><div><b class="title-3">Стенд на выставке</b><p class="body-6">APK на планшет, игра работает без интернета, рекорды дня на экране</p></div></div>
             </div>
           </div>
-          <article class="card-plain biz-card reveal">
-            <h3>Игра для бизнеса</h3>
-            <div class="price"><b>от 29 900 ₽</b><span>за игру</span></div>
-            <ul>
-              <li><i class="ph ph-check" aria-hidden="true"></i>Сценарий и игра под твою задачу</li>
-              <li><i class="ph ph-check" aria-hidden="true"></i>Два круга правок с менеджером</li>
-              <li><i class="ph ph-check" aria-hidden="true"></i>Коммерческая лицензия и пакет для сервера</li>
-              <li><i class="ph ph-check" aria-hidden="true"></i>APK для планшетов и телефонов</li>
-              <li><i class="ph ph-check" aria-hidden="true"></i>Отчёт: сыграли, дошли до финала, оставили контакт</li>
-            </ul>
-            <a class="btn btn-primary btn-lg" href="#early">Обсудить игру для бизнеса</a>
+          <article class="card biz-card reveal">
+            <figure><img src="img/g-catcher.webp" alt="Герой ловит сетью падающие звёзды и подарки" width="640" height="640" loading="lazy"></figure>
+            <div class="inner">
+              <h3 class="heading-6">Игра для бизнеса</h3>
+              <div class="price"><b class="heading-4">от 29 900 ₽</b><span class="caption-2">за игру</span></div>
+              <ul class="body-6">
+                <li><i class="ph ph-check" aria-hidden="true"></i>Сценарий и игра под твою задачу</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Два круга правок с менеджером</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Коммерческая лицензия и пакет для сервера</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>APK для планшетов и телефонов</li>
+                <li><i class="ph ph-check" aria-hidden="true"></i>Отчёт: сыграли, дошли до финала, оставили контакт</li>
+              </ul>
+              <button class="btn btn-primary btn-lg button-md" type="button" data-lead="biz" data-interest="Игра для бизнеса от 29 900 ₽">Обсудить игру для бизнеса</button>
+            </div>
           </article>
         </div>
       </div>
@@ -384,57 +387,121 @@
     <section class="section" id="faq">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow"><i class="ph ph-question" aria-hidden="true"></i>Вопросы</div>
-          <h2 class="h2">Что спрашивают до первой игры</h2>
+          <div class="eyebrow caption-1"><i class="ph ph-question" aria-hidden="true"></i>Вопросы</div>
+          <h2 class="heading-2">Что спрашивают до первой игры</h2>
         </div>
         <div class="faq reveal">
-          <details><summary>Нужно ли уметь программировать?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Нет. Ты выбираешь жанр и пишешь обычными словами, что хочешь получить. Код, уровни и картинки делает сервис</p></details>
-          <details><summary>Сколько времени собирается игра?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Черновик появляется за несколько минут: нейросеть пишет уровни и рисует героев, движок жанра собирает игру. Правка занимает секунды, потому что меняется описание игры, а не код</p></details>
-          <details><summary>Игра будет работать на телефоне?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Да. Любая игра открывается по ссылке в браузере на Android и iPhone. Для Android можно отдельно получить приложение APK, которое работает без интернета</p></details>
-          <details><summary>Что значит «развернуть на своём сервере»?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Ты получаешь архив с игрой и инструкцией. На сервере с Docker игра ставится одной командой, на обычный хостинг сайта архив просто загружается в папку. Игра работает на твоём домене и не зависит от Кузни</p></details>
-          <details><summary>Можно сделать игру про реального человека?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Да, это популярный подарок. Загрузи фото, и герой получит знакомое лицо. Фото другого человека загружай только с его согласия</p></details>
-          <details><summary>Можно взять героев из известных игр и мультфильмов?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Нет. Чужие персонажи и бренды защищены правом, такие запросы сервис не выполнит. Зато можно придумать своего героя, похожего по духу, и он будет только твоим</p></details>
-          <details><summary>Кому принадлежит игра?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">На платных тарифах игра твоя: делись, показывай, ставь на свой сайт. Зарабатывать на игре на своём домене можно с коммерческой лицензией</p></details>
-          <details><summary>А если игра не получилась?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Сначала ты играешь в бесплатный черновик и только потом решаешь, платить или нет. В платной игре правки входят в тариф: пиши, что поменять, пока не понравится</p></details>
-          <details><summary>Можно опубликовать игру в RuStore?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a">Да. С опцией подготовки к RuStore ты получаешь подписанное приложение, иконки, скриншоты и описание. Публикует владелец игры со своего аккаунта разработчика</p></details>
+          <details><summary class="title-3">Нужно ли уметь программировать?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Нет. Ты выбираешь жанр и пишешь обычными словами, что хочешь получить. Код, уровни и картинки делает сервис</p></details>
+          <details><summary class="title-3">Сколько времени собирается игра?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Черновик появляется за несколько минут: нейросеть пишет уровни и рисует героев, движок жанра собирает игру. Правка занимает секунды, потому что меняется описание игры, а не код</p></details>
+          <details><summary class="title-3">Игра будет работать на телефоне?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Да. Любая игра открывается по ссылке в браузере на Android и iPhone. Для Android можно отдельно получить приложение APK, которое работает без интернета</p></details>
+          <details><summary class="title-3">Что значит «развернуть на своём сервере»?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Ты получаешь архив с игрой и инструкцией. На сервере с Docker игра ставится одной командой, на обычный хостинг сайта архив просто загружается в папку. Игра работает на твоём домене и не зависит от Мастерской</p></details>
+          <details><summary class="title-3">Какие жанры есть?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Сейчас 16: раннер, космобой, платформер, гонки, хоррор-лабиринт, викторина, разбей стену, полёт, три в ряд, змейка, квест с диалогами, защита башен, ферма, арена, физическая головоломка и «Поймай». Десять из них можно попробовать прямо на этой странице</p></details>
+          <details><summary class="title-3">Можно сделать игру про реального человека?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Да, это популярный подарок. Загрузи фото, и герой получит знакомое лицо. Фото другого человека загружай только с его согласия</p></details>
+          <details><summary class="title-3">Можно взять героев из известных игр и мультфильмов?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Нет. Чужие персонажи и бренды защищены правом, такие запросы сервис не выполнит. Зато можно придумать своего героя, похожего по духу, и он будет только твоим</p></details>
+          <details><summary class="title-3">Кому принадлежит игра?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">На платных тарифах игра твоя: делись, показывай, ставь на свой сайт. Зарабатывать на игре на своём домене можно с коммерческой лицензией</p></details>
+          <details><summary class="title-3">Как с вами связаться?<i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">Оставь заявку на сайте и выбери, куда тебе ответить: Telegram, Max, телефон или почта. Заявка приходит нам сразу в мессенджер и на почту</p></details>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="section final" id="early">
+    <!-- LEAD -->
+    <section class="section" id="zayavka">
       <div class="container">
-        <div class="card-plain reveal">
-          <h2>Собери первую игру<br>прямо сейчас</h2>
-          <p class="lead">Черновик бесплатно и без карты. Понравится, заберёшь игру по ссылке, на Android или на свой сервер</p>
-          <a class="btn btn-primary btn-lg" href="#demo"><i class="ph ph-hammer" aria-hidden="true"></i>Собрать черновик бесплатно</a>
-          <form class="wait" id="wait-form" novalidate>
-            <label class="step-label" for="w-contact" style="margin:0">Ранний доступ к сервису: оставь почту или телеграм</label>
-            <div class="wait-row">
-              <input class="input" id="w-contact" name="contact" placeholder="you@mail.ru или @username" autocomplete="email" aria-describedby="w-msg">
-              <button class="btn btn-ghost" type="submit">Записаться</button>
+        <div class="card final-card reveal">
+          <div class="final-art">
+            <img src="img/g-dialog.webp" alt="Двое героев в таверне обсуждают новую историю" width="640" height="640" loading="lazy">
+            <div class="over">
+              <h2 class="heading-4 grad-text">Расскажи, какую игру хочешь</h2>
+              <p class="body-6 muted" style="margin-top:8px">Ответим туда, где тебе удобно. Черновик в демо можно собрать прямо сейчас, без заявки</p>
             </div>
-            <p class="form-msg" id="w-msg" aria-live="polite"></p>
-          </form>
+          </div>
+          <div class="panel">
+            <form class="lead-form" id="lead-inline" novalidate></form>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <dialog class="modal" id="lead-modal" aria-labelledby="lead-title">
+    <div class="modal-in">
+      <div class="modal-head">
+        <div><h2 class="heading-5" id="lead-title">Оставить заявку</h2><p class="body-6 muted" id="lead-sub">Ответим туда, где тебе удобно</p></div>
+        <button class="icon-btn" type="button" id="lead-close" aria-label="Закрыть"><i class="ph ph-x" aria-hidden="true"></i></button>
+      </div>
+      <form class="lead-form" id="lead-modal-form" novalidate></form>
+    </div>
+  </dialog>
+
+  <template id="lead-tpl">
+    <div class="game-attach" data-attach hidden><i class="ph ph-file-text" aria-hidden="true"></i><div><b class="body-4">К заявке приложен паспорт игры</b><p class="caption-2 muted" data-attach-text></p></div></div>
+    <div class="row2">
+      <div class="field">
+        <label class="caption-4" data-for="name">Как тебя зовут</label>
+        <input class="input" data-name="name" name="name" maxlength="60" autocomplete="given-name" required>
+        <span class="field-error caption-5" data-err="name" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label class="caption-4" data-for="interest">Что нужно</label>
+        <select class="select" data-name="interest" name="interest">
+          <option>Игра 690 ₽</option>
+          <option>Творец 990 ₽/мес</option>
+          <option>Студия 2 990 ₽/мес</option>
+          <option>Игра для бизнеса от 29 900 ₽</option>
+          <option>Игра в подарок</option>
+          <option>Узнать о запуске</option>
+        </select>
+      </div>
+    </div>
+    <fieldset>
+      <legend class="caption-4 muted" style="margin-bottom:8px">Куда ответить</legend>
+      <div class="pill-row" data-channels>
+        <label class="option pill"><input type="radio" name="channel" value="telegram" checked><span class="card-opt body-5"><i class="ph ph-telegram-logo" aria-hidden="true"></i>Telegram</span></label>
+        <label class="option pill"><input type="radio" name="channel" value="max"><span class="card-opt body-5"><i class="ph ph-chat-circle-dots" aria-hidden="true"></i>Max</span></label>
+        <label class="option pill"><input type="radio" name="channel" value="phone"><span class="card-opt body-5"><i class="ph ph-phone" aria-hidden="true"></i>Телефон</span></label>
+        <label class="option pill"><input type="radio" name="channel" value="email"><span class="card-opt body-5"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Почта</span></label>
+      </div>
+    </fieldset>
+    <div class="field">
+      <label class="caption-4" data-for="contact" data-contact-label>Ник в Telegram</label>
+      <input class="input" data-name="contact" name="contact" maxlength="80" required placeholder="@username или номер телефона">
+      <span class="field-error caption-5" data-err="contact" aria-live="polite"></span>
+    </div>
+    <div class="field">
+      <label class="caption-4" data-for="message">Комментарий, если хочешь</label>
+      <textarea class="textarea" data-name="message" name="message" rows="2" maxlength="600" placeholder="Например: игра на день рождения сына, герой наш кот"></textarea>
+    </div>
+    <div class="hp" aria-hidden="true"><label>Сайт <input tabindex="-1" autocomplete="off" data-name="website" name="website"></label></div>
+    <label class="check body-6"><input type="checkbox" data-name="consent" name="consent" required><span>Согласен на обработку данных из этой формы по правилам на странице <a href="politika.html" target="_blank" rel="noopener">«Согласие на обработку данных»</a></span></label>
+    <span class="field-error caption-5" data-err="consent" aria-live="polite"></span>
+    <button class="btn btn-primary btn-lg btn-block button-md" type="submit"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>Отправить заявку</button>
+    <p class="form-msg body-5" data-msg aria-live="polite"></p>
+  </template>
+
   <footer>
-    <div class="container foot">
-      <span>Кузня игр · прототип сервиса · <span id="year">2026</span></span>
-      <nav aria-label="Нижнее меню">
+    <div class="container foot body-6">
+      <div>
+        <a class="logo" href="#top"><img class="logo-mark" src="favicon.svg" alt="" width="28" height="28"><b class="title-3" style="color:var(--text)">Мастерская <span>ИГР</span></b></a>
+        <p style="margin-top:12px">Конструктор игр по описанию. Прототип сервиса, ранний доступ</p>
+        <p style="margin-top:8px">ИП Рамазанов Н. Д. · ИНН 151000641307</p>
+      </div>
+      <nav aria-label="Разделы">
+        <a href="#genres">Жанры</a>
         <a href="#demo">Демо</a>
         <a href="#plans">Тарифы</a>
-        <a href="#faq">Вопросы</a>
+        <a href="#biz">Для бизнеса</a>
+        <a href="#zayavka">Оставить заявку</a>
+      </nav>
+      <nav aria-label="Документы">
+        <a href="politika.html">Согласие на обработку данных</a>
+        <span>Оферта появится до приёма оплат</span>
         <a href="#top">Наверх</a>
       </nav>
-      <span>Оферта и политика конфиденциальности появятся до приёма оплат</span>
     </div>
   </footer>
 
-  <script src="assets/demo.js?v=20261102b"></script>
-  <script src="assets/app.js?v=20261102b"></script>
+  <script src="assets/engine.js?v=20261102e"></script>
+  <script src="assets/genres/index.js?v=20261102e"></script>
+  <script src="assets/app.js?v=20261102e"></script>
 </body>
 </html>
